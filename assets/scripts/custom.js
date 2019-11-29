@@ -5,11 +5,16 @@ $('[data-fancybox="gall"]').fancybox({
   animationDuration: 1000
 });
 
-
 let sort = document.querySelector(".gallery_toggle");
 let galleryMenu = document.querySelector(".photo");
+let focusElement = function () {
+ let focusButton = document.getElementById("gallery-toggle");
+ focusButton.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+  console.log(focusButton);
+};
 let showNum = 3;
 sort.addEventListener("click", function() {
+  
   if (showNum < galleryMenu.children.length) {
     showNum = showNum + 3;
     for (let i = 0; i < showNum; i++) {
@@ -23,7 +28,7 @@ sort.addEventListener("click", function() {
     }
     showNum = 3;
   }
+  $(function() {
+    focusElement();
+ });
 });
-
-
-

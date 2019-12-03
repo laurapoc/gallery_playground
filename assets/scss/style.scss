@@ -8,10 +8,18 @@ h1 {
   text-align: center;
   -webkit-transition: 2s;
   transition: 2s;
+  cursor: pointer;
 }
 
 h1:hover {
   font-size: 40px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 50px;
+  margin: 100px;
+  color: rgb(10, 83, 10);
 }
 
 .photo {
@@ -23,45 +31,51 @@ h1:hover {
   .display_block {
     width: calc(33.3333% - 2%);
     padding-bottom: 2%;
-    transition: opacity .5s  ease-in;
-
+    
   }
   .display_block:nth-child(n + 4):not(.show) {
-    opacity: 0.2;
-    visibility: hidden;
-    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    max-height: 0;
     padding-bottom: 0%;
+    transition: all 0.5s ease-in-out;
   }
 
   .show {
-    visibility: visible;
-    opacity: 1;
-    height: 100%;
+    max-height: 100%;
     padding-bottom: 2%;
+    transition: opacity 1s ease-in-out;
   }
 
-  .enableTransition {
-    opacity: 1;
-  }
 }
-
 
 .button {
   text-align: center;
 
   #button {
     cursor: pointer;
-    border-radius:0.5em;
-    padding:0.7em 1.4em;
+    border-radius: 0.5em;
+    padding: 0.7em 1.4em;
     font-weight: 400;
     background-color: rgb(170, 165, 165);
-    box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
-    color: #FFFFFF;;
+    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+    color: #ffffff;
     font-size: 16px;
-    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  }
+
+  #button-less {
+    cursor: pointer;
+    border-radius: 0.5em;
+    padding: 0.7em 1.4em;
+    font-weight: 400;
+    background-color: rgb(170, 165, 165);
+    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+    color: #ffffff;
+    font-size: 16px;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
   }
 }
-
 
 @media all and (max-width: 1200px) {
   a {
